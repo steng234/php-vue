@@ -4,7 +4,6 @@ define('BASE_PATH', realpath(__DIR__ . '/../'));
 
 echo "Running migrations...\n";
 
-//get all migrations
 $files = glob(BASE_PATH . '/database/migrations/*.php');
 sort($files); 
 

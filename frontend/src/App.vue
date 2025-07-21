@@ -1,77 +1,75 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-    </div>
-  </header>
+  <div class="app-layout">
+    <header class="app-header">
+      <div class="header-content">
+        <RouterLink to="/" class="logo">MyApp</RouterLink>
+        <nav class="nav-links">
+          <RouterLink to="/">Home</RouterLink>
 
-  <RouterView />
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #004080;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.nav-links a {
+  margin-left: 1.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.nav-links a:hover,
+.nav-links a.router-link-exact-active {
+  color: #ffdd57;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 </style>

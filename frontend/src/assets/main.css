@@ -2,8 +2,6 @@
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   font-weight: normal;
 }
 
@@ -30,6 +28,75 @@ a,
   #app {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
+}
+
+
+.orders-container {
+  font-family: "Georgia", serif;
+  width: 80vw;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.email-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #004080;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.orders-list {
+  margin-top: 20px;
+}
+
+.order-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #004080;
+  color: white;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
 }
