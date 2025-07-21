@@ -6,7 +6,6 @@ echo "Running seeders...\n";
 
 //get all seeders
 $files = glob(BASE_PATH . '/database/seeders/*.php');
-
 sort($files); 
 
 foreach ($files as $file) {
