@@ -23,6 +23,7 @@ FRONTEND_URL=http://localhost:5174
 ```
 
 Inizializza il Database (se non già presente):
+
 note: il database deve essere gia presente:
 
 ```
@@ -65,4 +66,10 @@ Per buildare il progetto in ES5 (legacy):
 
 ```
 npm run build
+```
+
+## Email di testing del proggramma
+
+```
+mario.rossi@example.com
 ```
