@@ -9,7 +9,12 @@ sort($files);
 
 foreach ($files as $file) {
     echo "Seeding: " . basename($file) . "\n";
-    require $file;
+
+    try{
+        require $file;
+    }catch(Exception $e){
+        echo $e->getMessage()."\n";
+    }
 }
 
 echo " All seeders completed.\n";

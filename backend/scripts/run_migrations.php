@@ -9,7 +9,13 @@ sort($files);
 
 foreach ($files as $file) {
     echo "Running migration: " . basename($file) . "\n";
-    require $file;
+    
+    try{
+        require $file;
+    }catch(Exception $e){
+        echo $e->getMessage()."\n";
+    }
+   
 }
 
 echo "All migrations completed.\n";

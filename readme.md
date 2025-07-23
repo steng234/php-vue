@@ -23,6 +23,7 @@ FRONTEND_URL=http://localhost:5174
 ```
 
 Inizializza il Database (se non già presente):
+note: il database deve essere gia presente:
 
 ```
 php scripts/run_migrations.php
