@@ -28,7 +28,7 @@ Installa le dipendenze:
 composer install
 ```
 
-Inizializza il Database (se non già presente):
+Inizializza il Database (se non già inizializzato):
 
 note: il database deve essere gia presente:
 
