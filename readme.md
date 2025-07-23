@@ -74,7 +74,7 @@ Per buildare il progetto in ES5 (legacy):
 npm run build
 ```
 
-## Email di testing del proggramma
+## Email di testing del programma
 
 ```
 mario.rossi@example.com
