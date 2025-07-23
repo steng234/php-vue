@@ -53,7 +53,7 @@ navigare nella cartella `frontend/`
 Crea un file `.env` nella  con queste variabili:
 
 ```
-VITE_BACKEND_URL=http://localhost:8002/api
+VITE_BACKEND_URL=http://localhost:8080/api
 ```
 
 Installa le dipendenze:
