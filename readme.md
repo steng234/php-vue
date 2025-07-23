@@ -22,6 +22,12 @@ DB_NAME=php_vue
 FRONTEND_URL=http://localhost:5174
 ```
 
+Installa le dipendenze:
+
+```
+composer install
+```
+
 Inizializza il Database (se non già presente):
 
 note: il database deve essere gia presente:
