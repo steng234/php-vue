@@ -22,6 +22,7 @@ if (!$user) {
 
 // Fetch orders with joined products (items)
 $db->where('orders.user_id', $user['id']);
+$db->where('orders.created_at', date('Y-m-d H:i:s', strtotime('-30 days')), '>=');
 $db->orderBy('orders.created_at', 'DESC');
 $db->join('order_items oi', 'oi.orders_id = orders.id', 'LEFT');
 $db->join('items i', 'i.id = oi.product_id', 'LEFT');
