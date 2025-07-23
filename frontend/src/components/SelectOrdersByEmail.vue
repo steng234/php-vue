@@ -66,9 +66,12 @@ export default {
           credentials: "include"
         });
 
-        if (!response.ok) throw new Error("Errore nel recupero degli ordini");
+        const data = await response.json(); // always try to parse the JSON
 
-        const data = await response.json();
+        if (!response.ok) {
+          throw new Error(data.error || "Errore");
+        }
+
         this.orders = data.orders || [];
 
       } catch (err) {
